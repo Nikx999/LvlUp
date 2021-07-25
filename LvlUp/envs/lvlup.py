@@ -50,6 +50,8 @@ class LevelUpdateEnv(gym.Env):
             correct_marks =0
             time_marks = 0
             update=0
+            val = 0
+            modval = 0
     
     
             if correctness==0:
