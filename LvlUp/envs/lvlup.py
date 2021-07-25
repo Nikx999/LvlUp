@@ -75,7 +75,7 @@ class LevelUpdateEnv(gym.Env):
                 time_marks = (x1*((5-current_level)/5)*beta *(np.exp(-time_taken/(max_time*modval))))+(x2*((current_level)/5)*beta*(np.exp(-max_time/time_taken*modval)))
 
                 update=correct_marks+ time_marks
-                return update
+            return update
 
 
         usr_level, ques_lvl, time, avg_time,correctness  = self.state
