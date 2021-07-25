@@ -65,15 +65,15 @@ class LevelUpdateEnv(gym.Env):
                     val=ques_level-6
                     modval=-val
         
-            x1=(1+correctness)/2
-            x2=(correctness-1)/2
+                x1=(1+correctness)/2
+                x2=(correctness-1)/2
         
-            correct_marks= (x1*((5-current_level)/5) *alpha*(val*(np.sqrt(np.exp((val**2)/37)-1)/5)))-(x2*((current_level)/5)*alpha*(val*(np.sqrt(np.exp((val**2)/37)-1)/5)))
+                correct_marks= (x1*((5-current_level)/5) *alpha*(val*(np.sqrt(np.exp((val**2)/37)-1)/5)))-(x2*((current_level)/5)*alpha*(val*(np.sqrt(np.exp((val**2)/37)-1)/5)))
 
-            time_marks = (x1*((5-current_level)/5)*beta *(np.exp(-time_taken/(max_time*modval))))+(x2*((current_level)/5)*beta*(np.exp(-max_time/time_taken*modval)))
+                time_marks = (x1*((5-current_level)/5)*beta *(np.exp(-time_taken/(max_time*modval))))+(x2*((current_level)/5)*beta*(np.exp(-max_time/time_taken*modval)))
 
-            update=correct_marks+ time_marks
-            return update
+                update=correct_marks+ time_marks
+                return update
 
 
         usr_level, ques_lvl, time, avg_time,correctness  = self.state
