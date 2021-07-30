@@ -16,6 +16,7 @@ class LevelUpdateEnv(gym.Env):
         self.preward = 0
         self.usrlvl = 1.5
         self.act =0
+        self.reward_range = [-10, 10]
         self.initial_level = 1.5
 
         # Actions of the format -.25 to .25
